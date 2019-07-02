@@ -12,3 +12,17 @@ F:\Aulas\projetoAulas\restFullApi\restFullApi\restFullApi\obj\Debug\netcoreapp2.
 F:\Aulas\projetoAulas\restFullApi\restFullApi\restFullApi\obj\Debug\netcoreapp2.1\restFullApi.RazorTargetAssemblyInfo.cache
 F:\Aulas\projetoAulas\restFullApi\restFullApi\restFullApi\obj\Debug\netcoreapp2.1\restFullApi.dll
 F:\Aulas\projetoAulas\restFullApi\restFullApi\restFullApi\obj\Debug\netcoreapp2.1\restFullApi.pdb
+F:\Aulas\projetoAulas\restFullApi\restFullApi 01 - Calculator\restFullApi\bin\Debug\netcoreapp2.1\restFullApi.deps.json
+F:\Aulas\projetoAulas\restFullApi\restFullApi 01 - Calculator\restFullApi\bin\Debug\netcoreapp2.1\restFullApi.runtimeconfig.json
+F:\Aulas\projetoAulas\restFullApi\restFullApi 01 - Calculator\restFullApi\bin\Debug\netcoreapp2.1\restFullApi.runtimeconfig.dev.json
+F:\Aulas\projetoAulas\restFullApi\restFullApi 01 - Calculator\restFullApi\bin\Debug\netcoreapp2.1\restFullApi.dll
+F:\Aulas\projetoAulas\restFullApi\restFullApi 01 - Calculator\restFullApi\bin\Debug\netcoreapp2.1\restFullApi.pdb
+F:\Aulas\projetoAulas\restFullApi\restFullApi 01 - Calculator\restFullApi\obj\Debug\netcoreapp2.1\restFullApi.csprojAssemblyReference.cache
+F:\Aulas\projetoAulas\restFullApi\restFullApi 01 - Calculator\restFullApi\obj\Debug\netcoreapp2.1\restFullApi.csproj.CoreCompileInputs.cache
+F:\Aulas\projetoAulas\restFullApi\restFullApi 01 - Calculator\restFullApi\obj\Debug\netcoreapp2.1\restFullApi.RazorAssemblyInfo.cache
+F:\Aulas\projetoAulas\restFullApi\restFullApi 01 - Calculator\restFullApi\obj\Debug\netcoreapp2.1\restFullApi.RazorAssemblyInfo.cs
+F:\Aulas\projetoAulas\restFullApi\restFullApi 01 - Calculator\restFullApi\obj\Debug\netcoreapp2.1\restFullApi.AssemblyInfoInputs.cache
+F:\Aulas\projetoAulas\restFullApi\restFullApi 01 - Calculator\restFullApi\obj\Debug\netcoreapp2.1\restFullApi.AssemblyInfo.cs
+F:\Aulas\projetoAulas\restFullApi\restFullApi 01 - Calculator\restFullApi\obj\Debug\netcoreapp2.1\restFullApi.RazorTargetAssemblyInfo.cache
+F:\Aulas\projetoAulas\restFullApi\restFullApi 01 - Calculator\restFullApi\obj\Debug\netcoreapp2.1\restFullApi.dll
+F:\Aulas\projetoAulas\restFullApi\restFullApi 01 - Calculator\restFullApi\obj\Debug\netcoreapp2.1\restFullApi.pdb

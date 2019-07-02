@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Aulas\\projetoAulas\\restFullApi\\restFullApi\\restFullApi\\restFullApi.csproj": {}
+    "F:\\Aulas\\projetoAulas\\restFullApi\\restFullApi 01 - Calculator\\restFullApi\\restFullApi.csproj": {}
   },
   "projects": {
-    "F:\\Aulas\\projetoAulas\\restFullApi\\restFullApi\\restFullApi\\restFullApi.csproj": {
+    "F:\\Aulas\\projetoAulas\\restFullApi\\restFullApi 01 - Calculator\\restFullApi\\restFullApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Aulas\\projetoAulas\\restFullApi\\restFullApi\\restFullApi\\restFullApi.csproj",
+        "projectUniqueName": "F:\\Aulas\\projetoAulas\\restFullApi\\restFullApi 01 - Calculator\\restFullApi\\restFullApi.csproj",
         "projectName": "restFullApi",
-        "projectPath": "F:\\Aulas\\projetoAulas\\restFullApi\\restFullApi\\restFullApi\\restFullApi.csproj",
+        "projectPath": "F:\\Aulas\\projetoAulas\\restFullApi\\restFullApi 01 - Calculator\\restFullApi\\restFullApi.csproj",
         "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
-        "outputPath": "F:\\Aulas\\projetoAulas\\restFullApi\\restFullApi\\restFullApi\\obj\\",
+        "outputPath": "F:\\Aulas\\projetoAulas\\restFullApi\\restFullApi 01 - Calculator\\restFullApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
