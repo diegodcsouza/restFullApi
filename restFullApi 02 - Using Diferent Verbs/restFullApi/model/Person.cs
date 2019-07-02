@@ -15,6 +15,6 @@ namespace restFullApi.model
 
         public string Address { get; set; }
 
-        public string gender { get; set; }
+        public string Gender { get; set; }
     }
 }
