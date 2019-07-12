@@ -7,7 +7,7 @@ namespace restFullApi.model
 {
     public class Person
     {
-        public long Id { get; set; }
+        public long? Id { get; set; }
 
         public string FirstName { get; set; }
 
