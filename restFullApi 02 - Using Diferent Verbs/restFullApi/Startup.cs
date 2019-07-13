@@ -34,6 +34,9 @@ namespace restFullApi
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
+
+            services.AddApiVersioning();
+
             //Depency Inject
             services.AddScoped<IPersonService, PersonServideImpl>();
         }

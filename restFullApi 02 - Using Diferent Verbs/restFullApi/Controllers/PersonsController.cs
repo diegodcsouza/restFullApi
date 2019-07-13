@@ -3,8 +3,9 @@ using restFullApi.model;
 using restFullApi.Services.Implementations;
 
 namespace restFullApi.Controllers
-{
-    [Route("api/[controller]")]
+{ 
+    [ApiVersion("1")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
     public class PersonsController : ControllerBase
     {
