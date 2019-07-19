@@ -8,10 +8,10 @@ namespace restFullApi.Repository
 {
     public interface IPersonRepository
     {
-        Persons Create(Persons person);
-        Persons FindById(long id);
-        List<Persons> FindAll();
-        Persons Update(Persons person);
+        Person Create(Person person);
+        Person FindById(long id);
+        List<Person> FindAll();
+        Person Update(Person person);
         void Delete(long id);
         bool Exist(long? id);
     }

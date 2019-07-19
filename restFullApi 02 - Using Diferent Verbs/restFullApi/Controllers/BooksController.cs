@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using restFullApi.Business;
+using restFullApi.Data.VO;
 using restFullApi.model;
 using System;
 using System.Collections.Generic;
@@ -39,7 +40,7 @@ namespace restFullApi.Controllers
 
         // POST api/values
         [HttpPost]
-        public IActionResult Post([FromBody] Books book)
+        public IActionResult Post([FromBody] BookVO book)
         {
             if (book == null) return BadRequest();
             return new ObjectResult(_bookBusiness.Create(book));
@@ -47,7 +48,7 @@ namespace restFullApi.Controllers
 
         // PUT api/values/5
         [HttpPut]
-        public IActionResult Put([FromBody] Books book)
+        public IActionResult Put([FromBody] BookVO book)
         {
             if (book == null) return BadRequest();
             var updateBook = _bookBusiness.Update(book);

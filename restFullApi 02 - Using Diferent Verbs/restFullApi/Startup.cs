@@ -8,9 +8,7 @@ using Microsoft.Extensions.Logging;
 using restFullApi.Business;
 using restFullApi.Business.Implementations;
 using restFullApi.model.Context;
-using restFullApi.Repository;
 using restFullApi.Repository.Generic;
-using restFullApi.Repository.Implementations;
 using System;
 using System.Collections.Generic;
 
@@ -70,7 +68,7 @@ namespace restFullApi
 
             //Depency Inject
             services.AddScoped<IPersonBusiness, PersonBusinessImpl>();
-            services.AddScoped<IPersonRepository, PersonRepositoryImpl>();
+            //services.AddScoped<IPersonRepository, PersonRepositoryImpl>();
 
             services.AddScoped<IBookBusiness, BookBusinessImpl>();
 

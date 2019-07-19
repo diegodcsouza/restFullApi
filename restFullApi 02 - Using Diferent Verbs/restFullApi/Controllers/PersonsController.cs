@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using restFullApi.model;
 using restFullApi.Business;
+using restFullApi.Data.VO;
 
 namespace restFullApi.Controllers
 {
@@ -34,7 +34,7 @@ namespace restFullApi.Controllers
 
         // POST api/values
         [HttpPost]
-        public IActionResult Post([FromBody] Persons person)
+        public IActionResult Post([FromBody] PersonVO person)
         {
             if (person == null) return BadRequest();
             return new ObjectResult(_personBusiness.Create(person));
@@ -42,7 +42,7 @@ namespace restFullApi.Controllers
 
         // PUT api/values/5
         [HttpPut]
-        public IActionResult Put([FromBody] Persons person)
+        public IActionResult Put([FromBody] PersonVO person)
         {
             if (person == null) return BadRequest();
             var updatePerson = _personBusiness.Update(person);

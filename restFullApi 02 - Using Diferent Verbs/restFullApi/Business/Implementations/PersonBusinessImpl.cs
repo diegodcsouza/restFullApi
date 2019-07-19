@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
+using restFullApi.Data.Converters;
+using restFullApi.Data.VO;
 using restFullApi.model;
 using restFullApi.model.Context;
 using restFullApi.Repository;
@@ -11,16 +13,21 @@ namespace restFullApi.Business.Implementations
 {
     public class PersonBusinessImpl : IPersonBusiness
     {
-        private IRepository<Persons> _repository;
+        private IRepository<Person> _repository;
 
-        public PersonBusinessImpl(IRepository<Persons> repository)
+        private readonly PersonConverter _converter;
+
+        public PersonBusinessImpl(IRepository<Person> repository)
         {
             _repository = repository;
+            _converter = new PersonConverter();
         }
 
-        public Persons Create(Persons person)
+        public PersonVO Create(PersonVO person)
         {
-            return _repository.Create(person);
+            var personEntity = _converter.Parse(person);
+            personEntity = _repository.Create(personEntity);
+            return _converter.Parse(personEntity);
         }
 
         public void Delete(long id)
@@ -28,19 +35,21 @@ namespace restFullApi.Business.Implementations
             _repository.Delete(id);
         }
 
-        public List<Persons> FindAll()
+        public List<PersonVO> FindAll()
         {
-            return _repository.FindAll();
+            return _converter.ParseList(_repository.FindAll());
         }
 
-        public Persons FindById(long id)
+        public PersonVO FindById(long id)
         {
-            return _repository.FindById(id);
+            return _converter.Parse(_repository.FindById(id));
         }
 
-        public Persons Update(Persons person)
+        public PersonVO Update(PersonVO person)
         {
-            return _repository.Update(person);
+            var personEntity = _converter.Parse(person);
+            personEntity = _repository.Update(personEntity);
+            return _converter.Parse(personEntity);
         }
     }
 }

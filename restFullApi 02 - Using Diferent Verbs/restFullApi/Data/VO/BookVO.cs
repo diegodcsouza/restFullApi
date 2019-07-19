@@ -1,10 +1,11 @@
-﻿using restFullApi.model.Base;
-using System;
+﻿using System;
 
-namespace restFullApi.model
+namespace restFullApi.Data.VO
 {
-    public class Book : BaseEntity
+    public class BookVO
     {
+        public long? Id { get; set; }
+
         public string Title { get; set; }
 
         public string Author { get; set; }

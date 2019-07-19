@@ -1,17 +1,15 @@
-﻿using restFullApi.model;
-using System;
+﻿using restFullApi.Data.VO;
+using restFullApi.model;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace restFullApi.Business
 {
     public interface IBookBusiness
     {
-        Books Create(Books Book);
-        Books FindById(long id);
-        List<Books> FindAll();
-        Books Update(Books Book);
+        BookVO Create(BookVO Book);
+        BookVO FindById(long id);
+        List<BookVO> FindAll();
+        BookVO Update(BookVO Book);
         void Delete(long id);
     }
 }
