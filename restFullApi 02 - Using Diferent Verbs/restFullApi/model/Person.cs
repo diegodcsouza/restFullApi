@@ -1,14 +1,13 @@
-﻿using System;
+﻿using restFullApi.model.Base;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace restFullApi.model
 {
-    public class Person
+    public class Persons : BaseEntity
     {
-        public long? Id { get; set; }
-
         public string FirstName { get; set; }
 
         public string LastName { get; set; }

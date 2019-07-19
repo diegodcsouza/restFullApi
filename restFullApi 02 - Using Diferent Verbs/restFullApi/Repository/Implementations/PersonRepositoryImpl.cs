@@ -5,20 +5,20 @@ using System.Threading;
 using restFullApi.model;
 using restFullApi.model.Context;
 
-namespace restFullApi.Services.Implementations
+namespace restFullApi.Repository.Implementations
 {
-    public class PersonServideImpl : IPersonService
+    public class PersonRepositoryImpl : IPersonRepository
     {
         private MySQLContext _context;
 
-        public PersonServideImpl(MySQLContext context)
+        public PersonRepositoryImpl(MySQLContext context)
         {
             _context = context;
         }
 
-        private volatile int count;
+        //private volatile int count;
 
-        public Person Create(Person person)
+        public Persons Create(Persons person)
         {
             try
             {
@@ -50,19 +50,19 @@ namespace restFullApi.Services.Implementations
 
         }
 
-        public List<Person> FindAll()
+        public List<Persons> FindAll()
         {
             return _context.Persons.ToList();
         }
 
-        public Person FindById(long id)
+        public Persons FindById(long id)
         {
             return _context.Persons.SingleOrDefault(p => p.Id.Equals(id));
         }
 
-        public Person Update(Person person)
+        public Persons Update(Persons person)
         {
-            if (!Exist(person.Id)) return new Person();
+            if (!Exist(person.Id)) return null;
 
             var result = _context.Persons.SingleOrDefault(p => p.Id.Equals(person.Id));
 
@@ -79,7 +79,7 @@ namespace restFullApi.Services.Implementations
             return person;
         }
 
-        private bool Exist(long? id)
+        public bool Exist(long? id)
         {
             return _context.Persons.Any(p => p.Id.Equals(id));
         }
