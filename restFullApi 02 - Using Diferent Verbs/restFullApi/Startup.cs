@@ -5,12 +5,15 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.Net.Http.Headers;
 using restFullApi.Business;
 using restFullApi.Business.Implementations;
+using restFullApi.Hypermedia;
 using restFullApi.model.Context;
 using restFullApi.Repository.Generic;
 using System;
 using System.Collections.Generic;
+using Tapioca.HATEOAS;
 
 namespace restFullApi
 {
@@ -63,6 +66,17 @@ namespace restFullApi
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
+            services.AddMvc(options =>
+            {
+                options.RespectBrowserAcceptHeader = true;
+                options.FormatterMappings.SetMediaTypeMappingForFormat("xml", MediaTypeHeaderValue.Parse("text/xml"));
+                options.FormatterMappings.SetMediaTypeMappingForFormat("json", MediaTypeHeaderValue.Parse("application/json"));
+            })
+            .AddXmlSerializerFormatters();
+
+            var filterOptions = new HyperMediaFilterOptions();
+            filterOptions.ObjectContentResponseEnricherList.Add(new PersonEnricher());
+            services.AddSingleton(filterOptions);
 
             services.AddApiVersioning();
 
@@ -89,7 +103,13 @@ namespace restFullApi
             }
 
             app.UseHttpsRedirection();
-            app.UseMvc();
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "DefaultApi",
+                    template:"{controller=Values}/{id?}"
+                );
+            });
         }
     }
 }
